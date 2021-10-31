@@ -1,0 +1,12 @@
+#!/bin/bash
+# 25/07/2020
+# testeIf
+
+if grep -q ^$1: /etc/passwd
+then
+    echo existe
+else
+    echo não existe
+fi
+
+grep -q ^${1}: /etc/passwd && echo existe || echo não existe
